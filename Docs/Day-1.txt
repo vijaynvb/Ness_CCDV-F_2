@@ -1,0 +1,51 @@
+1. AI Solutions:
+    1. Gen AI Applications 
+        Client                                  /                         Server
+        Application [chatgpt, claude.ai]    -> question ->                AI[LLM] [stateless service]
+    2. Agents [AI, Non AI]: code - nocode
+        Task Figma -> wireframes -> specific react,
+        [LLM, Tool, RAG, Memory [short long], prompt templates,  ]
+    3. Agentic AI:
+        achive a goal [hire java full stack developer 3]
+        orcastrator -> AI [LLM] -> plan ->
+            1. create jd [tasks]
+            2. post in job portals
+            3. aggregate the resume's
+            4. select rite candiate for interview 
+            5. schedule a interview
+            6. conduct interview 
+            7. offer the posiont 
+        onboarded with completion of induction
+
+
+LLM -> SLM
+
+
+Learning: 
+    1. experience -> unsupervised learning
+    2. academics ->  supervised learing 
+
+
+Scalling:-> performance imporvements
+        : process -> benchmarking -> [8cpu, 16gb, 1tb hdd, 100mbps] -> 100 concurent users
+    vertical: [16cpu, 32gb, 1tb ssd, 1000mbps] -> 200 2^64
+    horizontal: 
+         [16cpu, 32gb, 1tb ssd, 1000mbps]
+         [16cpu, 32gb, 1tb ssd, 1000mbps]
+         [16cpu, 32gb, 1tb ssd, 1000mbps]
+         [16cpu, 32gb, 1tb ssd, 1000mbps]
+
+Lambda -> functional prgraming -> java 8 
+
+takes arguments and return the value and never share the global variable
+
+
+the teacher thaught a student with a book -> 
+
+
+LLM : AI application
+    1. stateless service
+    2. huge knowldge 
+    3. api -> limt of data send to llm 
+
+NLP: Natural language processing -> intent -> take action
