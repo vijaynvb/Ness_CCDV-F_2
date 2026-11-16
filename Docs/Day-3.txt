@@ -1,0 +1,9 @@
+1. Efficiengy 
+    prompt cacheing 
+    batch processing 
+    token budgeting 
+2. cost and latency
+3. prompt structure 
+4. content management [messages, rag, tools]
+5. Prompt engg
+6. prompt evaluation

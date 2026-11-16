@@ -1,3 +1,78 @@
 
 
+service: 20$
+    claude.ai
+    claude cowork
+    claude code -> []
 
+    credit -> +$
+    platform.claude.com -> llms
+    sdk's
+        Antropic -> 
+        Claude_agent_framework
+
+C               /           S 
+
+python                      LLMs 
+request                     response
+                            stateless
+                            no memory [cache - 5min, 1 hr only] [SLA]
+                            context windows [in 1m, 272k, out 128k]
+                            Hallucination
+
+
+Model: LLM
+    financial
+    healthcare
+    geo location
+
+Inferencing:
+    prompt template -> search in financial domain
+    prompt: where is the bank?  [prompt engg]
+    Answer: sbi bank is next lane
+            blood bank is not here 
+            river bank is not found 
+
+
+Chatbot: 
+    Conversation: [compation] [persist memory]
+        user:
+        assistant:
+        user:
+        assistant:
+        .....
+
+
+        [
+            {"role": "user", "content": "My name is Vijay. Remember it."},
+            {"role": "assitant", "content": "I'll remember that your name is Vijay. Within this conversation, I'll keep it in mind. I should mention that I don't have memory across separate conversations, so if you start a new chat, you'd need to tell me again.Is there anything I can help you with, Vijay?"}
+            {"role": "user", "content": "What is my name?"},
+        ]
+
+Max_tokens= 100
+
+prompt= write a poem of 1000 lines
+
+LLM -> stop_reason = hit a max token
+
+Message(id='msg_011CgzmDZVssjaexe9tX46qC', container=None, content=[ThinkingBlock(signature='CAQS6gYKEAgTGAI4AUIIdGhpbmtpbmcSDMzw3KJAKiGrL8avrhoM8QMbUYgCQY5Rg9/6IjBuulT0P60sVX9ohlZq9kXkQxj5HCL6Jk9J3CkoZqqq7De9vwU5nwNEdnZtFrFgPUQqhwb2GN2bT+Y4ExYUljxJwQhxCMFy/cuz+kAgDdL71OY/EUo30Qx2QvatB/0VHiX5u14xaaaa9R9MjG3yPNDB/lI6UVcM0ldQEwU3wHEXBDMcyHdg2foa2UqxAxcrXb2Xk0RjmyeqAS2/Z6Gt292fKFwuFBShxMkKZd1WchI6yhsKAwYRrxkjqFVJMaJz+n3F08eH9537R+5lb99NhRk8a02oQW038ZvMG/dR3NFdI7KI/O+577ezovCH5LoFpNYjfWRxUNAKVhiprmK8khnZTSskX4uaGKruJevRxXdowICe9DJh7JHt0vrzRej8ylWLllC6051Pfkqr59UREK2pYvjy+LbqVLzLYX6X36tQu+SpgWtzkGHjisvUh1XoGCck7kQ26VvK3fJXLtDeWcQYrqdXXVj9csgUf8kVq+7LoMbigM7nwORxzrCKD3lAF4eBp1w0XzBv7ZGjeeEhGa4IEwQsWaqhXv6HgL26pemKJsI1aBNNOepGgtvkzNrViG1xlr9PyGaFo9dUZo4rPLNYnuhPkbM+1YSvnnvDk7DvabOYsa56GT8u3H16and+G3wPaPDlWktqEokgM76gbh1xUmAkYa62JjL48cXuPK32pj2ayDF9gysOKGLp9idj3hepr8s52DR1QoO7z9rI5sbgU+K+lQ6pYm0gxWs/IymOaUE5bQD4r/IuluIc6RkTum2Ay9p5KdG/G96j0etiTl5LoCDefOMgflznjfoF+hFFCdQ/va7mlWxdKO/LSPSXpmlmM7bBwyF5oTiCdKJmUKiQ8Ur9rKGCyoNC6W+jICX9mVPiq1T3x+QK/F5d8QDUh0/rpqStRXKnWcNtbHDuhZjec0k471aPnIDne2lyhUYtaZA75hQdSHK+lbavjQ3GAcVjEq+dctY1zNirrihZpmjr1p1IYuB5UwoBI4BU+bgdmRWqdY//gm+YDYqXwbOfZ0JcICeN2Yn2OSnRWwcf/OVQrQTi8F6a5mEnF44UGmvS8pfPHitnftmDOrPAE2A62dGuatHOMVwOt4SAGAE=', thinking='', type='thinking'), TextBlock(citations=None, text="Got it, Vijay. I'll use your name for the rest of this conversation. I can't promise I'll remember it in future conversations, though, since I don't carry memories between separate chats unless that feature is enabled for you.", type='text')], diagnostics=None, model='claude-haiku-5-5', role='assistant', 
+
+stop_details=None, stop_reason='max_limit', stop_sequence=None, 
+
+type='message', usage=Usage(cache_creation=CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0), cache_creation_input_tokens=0, cache_read_input_tokens=0, inference_geo='global', input_tokens=21, output_tokens=157, output_tokens_details=OutputTokensDetails(thinking_tokens=86), server_tool_use=None, service_tier='standard', speed='standard'))
+
+
+list all the countries and add a delimitrer ## after 5 countries 
+
+Message(id='msg_011CgznoAMQHgvXKQSgxsF6q', container=None, content=[ThinkingBlock(signature='CAQS6wYKEAgTGAI4AUIIdGhpbmtpbmcSDM7YhOCGKFipC4W6xRoMRVeoR3V1kOAtLtlDIjBaOZSjf4syN2yhkn+AwGPhfoC0L103+bTKfQPPRWDFIi76uaxY1tYdH4Umyx+bpCoqiAYVzMcIExiaZXttYbEmMl//TrCDuCsGgjroFo2gfV5VM3BONtt8XDEdD2AHMxb/EhMzdXaH7ONhy0ZAXe1WQJTmaQHyzgBp4yEXnT1w6IYDsbX6LdFeEwUYhbTVwwP7Sw73P/iu4hbTnM15rIQbW/GdgvoWHk9RTykXa1fJImdSTSopMgClhoeBQFdCpKvloK2mNsLdzsWyABghqG8HzLD64IQ+xrW4vtOLuiBVNXk+ua5JXyj5yhCC9laRYR4Hce50DxEgVBLpNUHWa4HYZ1wHvgPn6/NZoE7Haz5IlEZdx5PuctFIY3kehqXnaf8EdZCT2GMqNb0joIYuiMnJ9LSliQc2+DNLfh1sgTi3cJ9op/Dsbl5M9osTiSlO/rHzDqMGjYwd1XfOBW1xBZYtDAQPV1QdPWrXvnIrAkvl11Q4J56yHuiQ+JOTcJNs1bHnX2h9uPXK+qBaPMxxOOIn4AcugCiHFUZMO3fAglW0D8dIQ2UAXz7r9V4pBdx2gP1pa2erTkbeqOAYydW31gntAjH7lFf/FwSw14V4LvO5hOeLcQd0MAJhzIwcu3z90txS9wGLKln+bayknamzHV8EcKrW6iMYT01aDth6P928CD6N23rw3zEg5JyD39bq+/BwFbLQX+c1uVwrC6v8++a7vxxhYt82jIIQOMW7xfPa8UsXu4HbgGR8YEhC1njUB+HIUbmQUpWI6/x/N5aj+n6j4biX6F4Ow4SESsgH+Kofl3KvBzDmh9f7ReW/S212IWwxg9pA76+2eotIDMGnPcKF02ro7MZD0HYMfCYlY/S29EKPtaWj+b3Fpz8a1GB/t5S18E20DBk3xHtMZOFG4Iu3p1zM8B1e3G3zQ4ZYNxRoeBS7gsbnq3ykfbtrh+feGYA2+aURR4Nn9doV5u7cZQOyva6x7wM/WjwBBHIwVBJ8tSmLbYwOVJwN959aPc5IluR26F+549fkd+9TmkutZ8T5gbocp97YQ0npzE5uwt1KOQ9qEdhcZOpaFGXayGXuZhyduV40xu9kzJogghgB', thinking='', type='thinking')], diagnostics=None, model='claude-haiku-5-5', role='assistant', 
+
+stop_details=None, stop_reason='max_tokens', stop_sequence=None, 
+
+type='message', usage=Usage(cache_creation=CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0), cache_creation_input_tokens=0, cache_read_input_tokens=0, inference_geo='global', input_tokens=30, output_tokens=100, output_tokens_details=OutputTokensDetails(thinking_tokens=100), server_tool_use=None, service_tier='standard', speed='standard'))
+
+Message(id='msg_011CgznsqcudacBks6K6zuv9', container=None, content=[ThinkingBlock(signature='CAQSrCEKEAgTGAI4AUIIdGhpbmtpbmcSDI3dtCChETiLefCIvBoM/gLJRXCOJB4DF/FjIjBiwNUr0OVvjCGzAn9dm+v+ddb6+2FHcrvH+VmE0L+ER1wcp2BrpI9QtXLCY35SY/UqySCASpJ+n53YazFwTwM65YBf/kJo2JPGQGjQjdeOrChKT6sr63CstReVSEoC6vDLApgR+8a2PBlyxqrSSZgRBqeMH+IrgeSmTQKU45ZJPsM/51ykFQACbi7TtADwlAe0Ze8nUleTOLt/ygyS2U+mPdaFfDTvILD97h6pn9M49Eg0w5D1rwPLLIJ/yB6HWqvQ3biMipFbdg2pXhmjgDsbjIxbwEwbY4N/YODKdZa2ap8vgVxLT1TdQpxFecE2hZu8DjqUpGK4WQjiBtEJSa+pRShp34uWBJP4cP8SvydL3TkH5fgMYiRs2a22loBWI48LPOg8VAgmkuLMTmT76qXrIinJWEzbyuhSyUjZT+7yqUuVs1oopGdPeUmN9E74EIpNhZbyg3ug76Uy0ZC3NVecPvkIk/ksFmvdQJ6zQd/263q74Uhsod7w4JaLVQG2+45d9kIdb5ZDPNRZIsvjhmvD1wrfi7LpcJ9HmcFuwGJoJJC7qU+XKuODa9SqRFVGO0uKO7fXZlRj2hcLsPTrIked06KcPLI+aWm/0qKtaG/6q7PGeFgILzv6F08S2VHIxltQjKbyd96J/q3+Di3MdTKx1BRhBNUZ7PVi2PfwcAnm7FeL+QKz3kzDaPK/Olk3SCqCEwMP4VZ7f6gLWogNzVOGzZEUzzqVlZ2wwcBdqy3s1hRBeXvK4n00bjeUZO7Ob3QIsFIH6iRQSnjin6r0Wg8wb7tHx7JB26AgIOp4rSl8OeSVwUskscSRBwzctE15jU6CsvuOJxGtsGlBJ1ZAd4W6KGiNdbbo0DqLw7rK8EdcDtZP+G4V/i+cfzoYAwfJTOpjCxOmogUbOfSXqg2gdAdXyQ/t3ojcYA3pM+JEjCaSx2vncwjUO30am+jPr/wJyCKJneoylXZcJdskO8YaDo1cXZRtkH6WSs9GzRJ7CcI/EJlZ39o3uc/RjWpho1gjr1BtIS17tRp6iL+xoqLBGCDNsjL0EAnnK5TJ4vFIcq2YJj+tk+AcPDpTzY/X4m3G/jMr2n/YzKK6GjYoOzV5rQhtbZ9nX4QfiZxCUewncsL0WT9GcOdya4Nlz38yBujGX+mQQYCfSMwC+F+WnnSBfHG5vPlC2fz2zvw92FXMis9nOF1r3adVrwFsX+T3AK9WSYHoS8oN75RyJucmI38nTPlrr63BE1gaPn5FawHsqkpFh+sH48a+FxsFKPEkpZKMyTg3OSSw6YOQsopiA+Itds92jvkVE3z5T4joPQNv/kCj7zVlJ2MJWb2iWb4JaDvJsdvBD8KwlPZZIML5uwunxvp5ghusjjU+7xwGLue1CzxA2n8foEQiXigOXSqZLFc0kuvCkcAcz89GRxcDDb0AZHDiUvfUy4tUrS4TE9C8f2Zg3o5Ef7N3ccJwR+5axyqU5ObSnGVpzR5yzJb+rr0rcCpPD5K201XMOuVpYR0OeSkAllLA4ViQ899483adgBnjmeAoujBkYGlEoKFuuNjvraFw7xBVxpuUANAh2a//UNyV9JfF22LRcJKEdCCCqP7eyHt3vWY6Ie4nphRlFoL3wRwB/LeP9QeNkbhYA5EYuF7hw85NiQS5q4qfu+Af1MrbMed4ZwHKbEKfjEbmKmROgTnLLVyAh7XynfgKEVNHrnkkjLo0KFSQPr8B/dbCB7S1BV8ZNn1kydzbLxy3GD7Hm/T1R5HU7p8AwioIl8STzyzAGalE7m4NbTVhQKqXnYaP9YcDcGmRV8L2mrCroAGNgXI/3QXRw8hsPfk67ov4wqnIkPjJzlklfm+tdWKFBkOIujR+IfO1iHq8UOJz/56bdpoYNJfGPKjsxQOrJ16hlhsWiE+OsZmA1bFnkKHijYE14SfJENPP647SLvo/FZBNO0VqoiLlzcT/zDcuNwOUir2KpO0nyKoE3vHQYrBADOxiYQEczWEmE4XDn/Y3ctzOaUHUV/tGRFux/nO83yaldmCUHXYxupBesKsz1FeWbVdWbRjXCQWDabmJwG5KJyFh+O7ZqnOK7Vk9srjQ37ubo+xgngHbS+udRk9YOM9xeJTQzsQcdRSM0gRgmcJlI8ANqPXAYankZjzHFVopuHJVvn1KpnPHK/716aSxLzdCK0QzNTlmhf1LSc27+sqYkLo3n/wWgLqzC5/0GcSRlJ+19/CK2S0Qeby0nNLTipbUmjlBub0O6Dk4LHWyZqmny9JIVgPXeLrmB+BL9aBn0N0T66HivAHJOvRq1Yl5Sju3GBqHkqGb5w99KE3CMzU73Ve3gxEbvifDrqTn31JCz6oQ0PFd2/toOFF1ychVH3+3JP+3ciFuqVDs73FDkOsNK4mptZZmsKw9YiV7qwmbhWsheFd6UvI3aJMYJsops4Oh4rDOmZ9HvoAUvg+iW/90SPLtAWbzGxm9VkA3qnW7BLdjeOaZ1UOZtLiYED3otSwNz5qBcUbHGoC5IZuxNs/si51MLNKpXkUqEv63KLf+lUgGvj/fupz4c3aYbrHE/v5DrvPbMmwt/1hXMb4WhWQZMErI9KOLTrzfyzuwSNAD2kHOLNk2Cpt38CWc+JGEidN36c3BNf2s/YG3cHoZrd51BEGnkiJaiJYYgU62CGIohLnJ3dVBK46GvnTyoGRhpEUafxDwY+bo2BQfFt3CDszzvb47ukx671lyQ4L56HlcHKvOheMT/QR04XxR+26ZS9j33ailIciPamRG4bx1p52UBkB9mGGU/q71q5Mz9zbpmqviDxJz3VIharDO8Ngwuit3erMzPE9U9YsCdFvIOynO2nSHfEMm/Sd7oDh36YNEFV1LkLSf2lcS8BXinXO5ju5RlYwQwz8c30FRogxZUp1InMMUHRNafoD7K1LZA/udPsndoP5pdnfwPowUIHlTGTZ0poUfjc0DQ7FMEA2QnNMyAUWr53XLUxM1YVXN96i7t3dle7oTfquCyz9kRYtQDb+CW7VonmelfIT/6LJBuFIB+gBDL/l1hS6vnzC3C7EGy3XhWqrWKVsjpLmkNr5s+sXUb5KYjusPkXKzR1mU6BM8Uv/NWlq9eFbGcfz1gRwAs29t+iZGBdrO7VIEExSYJXooZMWwZOd+cylYIAGw/hiQdYKEMtqT+m8V8kfg1/k4A6pMtNCwaa9XaSIEJIIDawzmLZW4yl7jbKVcbM0DCvr38XAIgzWOWtEjJpyWgXiLsIpI/x75tYHpDXJLRNx/y/kM8BN00J9DPj67BTVmKjIixrDYW0AdgoGRI9zoGGr2yWjCvYsMiVoyayl/12q2jqVGhV4xKoZ5nUV+Q12tTY6/sZWojPd3dGkP3DhpOX12dsYzrYlBbMk/+HMDZeSs/iZeIOfvbk/BCuPsNq/GOE5W+Cr66novFPTeRf8J+eJgZ62M6CCmD07tJUWf/LMj7vEMsNpave+QKa5XsbiEppMc/denlCL9oeIhVyvv25k0q8U4EIkUcRW1jsKsTjF6zytfSgqQ9jbIuw4/U8U9FC0l9YKJ0pIzd4MZzh2783XW0NmWIdKyZkzM8WX1hzpTce5xAShWZ+OzimiE5lieXOOQFpBhkMJcJqIWKXgGzlGFzTz7BBbGcJrWdeDFugEWNfVABhMHrao/LmbhtC6JT/XVZlao7Xgvbl/KyIUbUemNDTkmCh2FTKBn/uzzqNz+pilkBX2cbczSeTu1j17RA7k/VX2bbPMrMp1+Lxw97fQRGHgNjeUvPyyOkiAlFuU3xoCcEusKcZGHYoySaxudAosI0uoSc3zOGLSfwCNXd6f620qjixubnOcGPMU0KSkNgCyKr7TIqAlO74Bsbu/IK+ZdTJSWohz7Xrkl/xk9Kb6Gmn2lB1qVjfJ5lC8EHSuZ+MfekV7Yh4lFsB94eO311ZEPiEdhJzwI3bmjsyVhrINxp7HNiSLUMEUoRR22ksCSLZ/OkUkECjXq/VGlHl07rVGFPyjKg9rFrEYYRZcq271uAeK7zeNevEHZqLCX4loDYgch5LspovkxGnmbukXamiSdTmUXQc5CYHPNqRPg/BAoEf+rTFoTeUVyY1gwgqEWk22SQKgrXTbpCG4/OzgJSBWcl4F/FlooHiP4B4e1VDA/JbLLLj6DrQJ0zoqt9lwNxOk10Rrkr8HnubFCDZtOoQvC9/QlEKp7gxjoN293KemWHueT4xwENQHX6P7b19uJ8Xh4EHefr6yE8LAXBq+RAE/rF9SRcYt7owksZBW570PxrhbDnvlBuj88wBTGJIWegQ4meI1zx/GlUvEqBeWqeVEaI6uDjt/j6P0R+k63HITleJC7lWmP0aFqLcqjm4a0IxNdDSnjWd7RNGfkFkiJe1e8wtk2X5ZNvyY0dowFB0HWjFAGgpyPljz7jaTKbkzxxaRO+FcgeRmFx3PVwdnmgGwiXQ+H2pRtMvYQAOyjOoPpHr3+ubO4mCn3R5Y2XEFuA3cCIV8iCEfhNGfv3d2usAT0wIu9WYZG/dOOP8qsJmHXynYp2wMX14tbnhq2e/GcunAYM6gySvXpjsw1ewmpDB2unN3uzm7dTAkWPYLicO5Cog4M0wraOnepz+CnnaM83+dMe/0zgmfIXlbVp3yuQFy1v/SKujlY8VnPjAmPxbIqPEcqgiQbmthy4kb9TqNLDtz3ppJoyisUqESQZ6ri+LA0ScQKg3uJF2IkBx2Y3yw9HiMrtiilaiCRgMhwMTU3xf1DPH0K5S5S09f0H4JOnztM1ectW8o2N59VmjretGL2w1uzKtYyz83NXjqLGdQaPY02JCZbdTd7pV0vx5PgAhrinm7psU2UbnIaUG2ZEbx+JktLLN+yFqd21l5p/CuOcHX7Sr66g5AHE+wcRWQVzqf6es5YS7oxlo/LpG4HtyJITbC1ZQgZpR+cgUPP4azLQts57B14ePoZpZIlu7GY9HqO2MrPF1lM/847vlCCn2KdPY9cIEIJ6zBOG/x4Sk1iXzlNUv40E4hWeBIstku6JX6PyTuKihaHPHm8AZbx5NQUTId+mJXBwqVtP6cuhxB2t+mCBsUT1h+SECas4rwSgt/kBae5O2vI1pgdDz+0Eslf4jFmAwkSndw6k8rGcxXnywdJrVBjCqaFYELNwWxYkgbeMwjq8/bUhs/TnzCnsJfJEsPuM8k8GW/iOReg/3M5dFf1zqb5TQ+Wai6TsMykeon0POlGNdSX+HUSz0ntpaHnacJLP1a4cueHfKRssgbT1BGJHIYK8tvyzrWgiqRzFgoLTwgORdoVxuJUFcomNapoHJS7qHhuuvie7jdA4wQAKuScoGbdlsJsGviDj2qBVZ7kLD2Pl6rnY1tUmgw4EjoSraA8SFmRpP+yFz5h5wdljUP/DfKYOCPhzVhTXbGE5JXISdkOQ+1I1X0wCVzlrrQwmk6rXj5XT0fS4d6PyLt7AVJ8iJ/3XkyzhYW9ccl4wY0ORPBIbbavrxgqsbjHvdtxRfSuWpGDZdI2hrPaDPi4CD5Q79fCD4VSpDEoAkPi57G/YTIvGrN6dhBZNM8L3nA3Z1RmjDeeLs+nCcvhch+F1sZXFrbn+ARJl0XuP5fJyLedB7RdpIIpywapo8WMQpMAE3FaHG1mZvX2vfFhIND2ZxASSxgB', thinking='', type='thinking'), TextBlock(citations=None, text='Afghanistan\nAlbania\nAlgeria\nAndorra\nAngola\n', type='text')], diagnostics=None, model='claude-haiku-5-5', role='assistant', 
+
+stop_details=None, stop_reason='tool_use', stop_sequence='##', 
+
+
+type='message', usage=Usage(cache_creation=CacheCreation(ephemeral_1h_input_tokens=0, ephemeral_5m_input_tokens=0), cache_creation_input_tokens=0, cache_read_input_tokens=0, inference_geo='global', input_tokens=30, output_tokens=2006, output_tokens_details=OutputTokensDetails(thinking_tokens=1980), server_tool_use=None, service_tier='standard', speed='standard'))
