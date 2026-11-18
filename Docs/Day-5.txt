@@ -1,0 +1,62 @@
+
+1. scenarios:
+    Testing 
+    Developers
+    Business
+
+
+
+Context enng -> rag
+
+1. Tools real time data 
+    1. client tools
+        executed in the local system custom -> [api -> secret keys -> data] -> llm
+
+    Anthropic sdk ->                    llm ->
+    
+    @tool(
+        "name": "get_weather",
+        "Description": "get the cirrent weather for a given city",
+        "input_paramertes": location
+    )
+    def get_weather(locatoin):
+        pass
+
+    create(
+        model, max_token, messages = {"user": "what is weather in bangalore"}
+        tools = [get_weather]
+    )
+
+    1. llm -> response -> invoke a tool called get weather 
+    2. sdk -> invoke the tool result 
+    3. prepare a messaget to your llm 
+    4. send data to llm -> final reponse 
+
+    1. define one or more -> llm call -> prompt -> which tool to call 
+        1. sequential
+        2. parallel
+
+        react-agent-pattern 
+
+        [local_web_search, remote_web_search]
+        tool_choice={ type="tool", "name": "remote_web_search"}
+
+
+    2. server tools 
+        execute on llm [web_search, web fetch, code writer, mcp advisor] -> publicly accessable data 
+
+
+2. MCP tools -> product -> third party consumptions
+    1. figma, playwright - expose tools -> UI UX 
+    2. AI Tools -> claude code,             mcp tools from figma
+                   git hub copilot 
+                   autonis
+
+ ai application    client [ thread process]   ipc  server [process]
+        stdio -> 
+        sse ->  Server-Sent Events
+
+
+claude code -> inbuilt [mcp client] -> mcp server [localhost] -> tools
+
+tools -> read_doc 
