@@ -1,6 +1,6 @@
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP("Docs")
+mcp = FastMCP("Docs", host="0.0.0.0", port="3000")
 docs = {"plan.md": "The plan outlines the project steps."}
 
 @mcp.tool()
@@ -17,4 +17,4 @@ def summarise(doc_id: str) -> str:
     return f"Summarise document {doc_id}."
 
 if __name__ == "__main__":
-    mcp.run(transport="stdio")
+    mcp.run(transport="streamable-http")
